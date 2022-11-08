@@ -35,7 +35,7 @@ describe 'ActiveRecord Obstacle Course, Week 4' do
 
     # ------------------ Using ActiveRecord ---------------------
     # Solution goes here
-    orders = Order.where.not(id: @user_2.id ).sum("amount")
+    total_sales = Order.where.not(user_id: @user_2.id ).sum("amount")
     # -----------------------------------------------------------
 
     # Expectation
